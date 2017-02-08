@@ -454,40 +454,7 @@
                             <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-layers"></i><span class="sidebar-mini-hide">Solicitudes</span></a>
                             <ul>
                                 <li>
-                                    <a href="base_pages_blank.html">Blank</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_dashboard_v2.html">Dashboard v2</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_search.html">Search Results</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_invoice.html">Invoice</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_faq.html">FAQ</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_inbox.html">Inbox</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_files.html">Files</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_tickets.html">Tickets</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_contacts.html">Contacts</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_coming_soon.html">Coming Soon</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_coming_soon_v2.html">Coming Soon v2</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_maintenance.html">Maintenance</a>
+                                    <a href="#">Dummy</a>
                                 </li>
                             </ul>
                         </li>
@@ -500,19 +467,16 @@
                                 <li>
                                     <a href="{{ route('suplidor.create') }}">Agregar Nuevo</a>
                                 </li>
+                                <li>
+                                    <a href="{{ route('categoria.index') }}">Administrar Categorías</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
                             <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-user"></i><span class="sidebar-mini-hide">Usuarios</span></a>
                             <ul>
                                 <li>
-                                    <a href="base_pages_profile.html">Profile</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_profile_v2.html">Profile v2</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_profile_edit.html">Profile Edit</a>
+                                    <a href="#">Dummy</a>
                                 </li>
                             </ul>
                         </li>
@@ -520,16 +484,7 @@
                             <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-bubbles"></i><span class="sidebar-mini-hide">Blog</span></a>
                             <ul>
                                 <li>
-                                    <a href="base_pages_forum_categories.html">Categories</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_forum_topics.html">Topics</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_forum_discussion.html">Discussion</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_forum_new_topic.html">New Topic</a>
+                                    <a href="#">Dummy</a>
                                 </li>
                             </ul>
                         </li>
@@ -537,31 +492,7 @@
                             <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-lock"></i><span class="sidebar-mini-hide">Reportes</span></a>
                             <ul>
                                 <li>
-                                    <a href="base_pages_auth.html">All Pages</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_login.html">Log In</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_login_v2.html">Log In v2</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_register.html">Register</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_register_v2.html">Register v2</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_lock.html">Lock Screen</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_lock_v2.html">Lock Screen v2</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_reminder.html">Password Reminder</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_reminder_v2.html">Password Reminder v2</a>
+                                    <a href="#">Dummy</a>
                                 </li>
                             </ul>
                         </li>
@@ -569,25 +500,7 @@
                             <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-fire"></i><span class="sidebar-mini-hide">Otros</span></a>
                             <ul>
                                 <li>
-                                    <a href="base_pages_errors.html">All Pages</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_400.html">400</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_401.html">401</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_403.html">403</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_404.html">404</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_500.html">500</a>
-                                </li>
-                                <li>
-                                    <a href="base_pages_503.html">503</a>
+                                    <a href="#">Dummy</a>
                                 </li>
                             </ul>
                         </li>

@@ -26,5 +26,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 
     Route::resource('suplidor', 'SuplidorController');
 
+    Route::get('categoria','CategoriaController@index')->name('categoria.index');
+    Route::post('categoria', 'CategoriaController@store')->name('categoria.store');
+    Route::delete('categoria/{id}', 'CategoriaController@destroy')->name('categoria.destroy');
+
 });
 

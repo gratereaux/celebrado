@@ -83,6 +83,10 @@ class SuplidorController extends Controller
     public function show($id)
     {
         $suplidor = Suplidor::find($id);
-        dd($suplidor);
+
+        //dd($suplidor);
+
+        return view('admin.suplidor.profile')
+                ->with('suplidor', $suplidor);
     }
 }
