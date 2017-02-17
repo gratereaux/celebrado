@@ -47,6 +47,8 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" id="css-main" href="/assets/css/oneui.css">
 
+    <link rel="stylesheet" href="/assets/js/plugins/simplemde/simplemde.min.css">
+
     <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
     <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
     <!-- END Stylesheets -->
@@ -476,7 +478,7 @@
                             <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-user"></i><span class="sidebar-mini-hide">Usuarios</span></a>
                             <ul>
                                 <li>
-                                    <a href="#">Dummy</a>
+                                    <a href="{{ route('usuario.index') }}">Usuarios Registrados</a>
                                 </li>
                             </ul>
                         </li>
@@ -688,16 +690,19 @@
 <script src="/assets/js/core/js.cookie.min.js"></script>
 <script src="/assets/js/app.js"></script>
 
+<script src="/assets/js/plugins/simplemde/simplemde.min.js"></script>
 <!-- Page Plugins -->
 <script src="/assets/js/plugins/slick/slick.min.js"></script>
 <script src="/assets/js/plugins/chartjs/Chart.min.js"></script>
+
+@yield('footercode')
 
 <!-- Page JS Code -->
 <script src="/assets/js/pages/base_pages_dashboard.js"></script>
 <script>
     jQuery(function () {
         // Init page helpers (Slick Slider plugin)
-        App.initHelpers('slick');
+        App.initHelpers('slick', 'descripcion');
     });
 </script>
 </body>

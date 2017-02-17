@@ -34,6 +34,11 @@ class SuplidorController extends Controller
     {
         $suplidor = new Suplidor($request->all());
 
+        //File image upload
+        $imageName = $request->file('image')->getClientOriginalName() . '.' . $request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move(base_path() . '/public/images/avatar', $imageName);
+
+
         $final = $suplidor->save();
 
         if ($final){
@@ -69,22 +74,25 @@ class SuplidorController extends Controller
     public function edit($id)
     {
         $suplidor = Suplidor::find($id);
-        $supcat = Suplidor_Categoria::where('id_suplidor', $id)->get();
+        $supcat = Suplidor::find($id)->categoriasporsuplidor;
         $cat = Categoria::pluck('nombre', 'id');
 
-        dd($cat);
+        $lists = array();
+
+        foreach($supcat as $cats)
+        {
+            array_push($lists, $cats->id_categoria);
+        }
 
         return view('admin.suplidor.edit')
                         ->with('cats', $cat)
                         ->with('suplidor', $suplidor)
-                        ->with('categorias', null);
+                        ->with('categorias', $lists);
     }
 
     public function show($id)
     {
         $suplidor = Suplidor::find($id);
-
-        //dd($suplidor);
 
         return view('admin.suplidor.profile')
                 ->with('suplidor', $suplidor);

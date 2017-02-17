@@ -9,7 +9,8 @@
 <div class="block block-bordered">
     <div class="block-content">
 
-        {!! Form::open(['route' => 'suplidor.store', 'class' => 'form-horizontal push-10-t push-10','method' => 'POST']) !!}
+        {!! Form::open(['route' => 'suplidor.store', 'class' => 'form-horizontal push-10-t push-10','method' => 'POST', 'file' => 'true']) !!}
+            {{ csrf_field() }}
             <div class="row">
                 <div class="col-sm-7">
                     <div class="form-group">

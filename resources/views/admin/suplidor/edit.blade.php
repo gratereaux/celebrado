@@ -53,7 +53,7 @@
                     <div class="form-group">
                         <div class="col-xs-12">
                             {!! Form::label('descripcion', 'Descripción') !!}
-                            {!! Form::textarea('descripcion', $suplidor->descripcion, ['class' => 'form-control input-lg', 'id' => 'descripcion', 'placeholder' => 'Detalle del comercio']) !!}
+                            {!! Form::textarea('descripcion', $suplidor->descripcion, ['class' => 'js-simplemde form-control input-lg', 'id' => 'descripcion', 'placeholder' => 'Detalle del comercio', 'name' => 'descripcion']) !!}
                         </div>
                     </div>
                     <div class="form-group">
@@ -96,8 +96,11 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('foto', 'Foto') !!}
-                        {!! Form::file('foto', $suplidor->foto, ['class' => 'form-control input-lg']) !!}
+                        <div class="col-xs-6">
+                            {!! Form::label('foto', 'Foto') !!}
+                            <br>
+                            <img src="/assets/img/avatars/{{$suplidor->foto}}" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
