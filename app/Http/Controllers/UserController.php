@@ -85,4 +85,10 @@ class UserController extends Controller
     {
         dd($id);
     }
+
+    public function storepreregist(Request $request){
+
+        dd($request->all());
+
+    }
 }

@@ -15,9 +15,10 @@ Route::get('/', function () {
     return view('soon.index');
 });
 
-Route::get('/pre-register', function(){
-    return view('soon.regist');
-})->name('preregister');
+Route::get('/pre-register', function(){ return view('soon.regist'); })->name('preregister.index');
+
+Route::post('/pre-register', 'UserController@storepreregist')->name('preregister.store');
+
 
 Auth::routes();
 
