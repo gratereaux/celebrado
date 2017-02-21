@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Subscribe;
 
 class UserController extends Controller
 {
@@ -88,7 +89,12 @@ class UserController extends Controller
 
     public function storepreregist(Request $request){
 
-        dd($request->all());
+
+        $subscriber = new Subscribe($request->all());
+
+        $subscriber->save();
+
+        return redirect('http://www.celebra.do');
 
     }
 }

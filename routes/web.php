@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('soon.index');
+    //temporal
+    return view('soon.regist');
 });
 
 Route::get('/pre-register', function(){ return view('soon.regist'); })->name('preregister.index');
@@ -27,7 +28,6 @@ Route::get('/home', 'HomeController@index');
 
 
 Route::get('/admin', 'AdminController@index');
-
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 
     Route::resource('suplidor', 'SuplidorController');
