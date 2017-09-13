@@ -28,4 +28,8 @@ class Suplidor extends Model
         return $this->hasMany('\App\Suplidor_Categoria', 'id_suplidor', 'id');
     }
 
+    public function servicio(){
+        return $this->hasMany('\App\Servicio', 'suplidor_id', 'id');
+    }
+
 }

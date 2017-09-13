@@ -9,7 +9,7 @@
     <div class="block block-bordered">
         <div class="block-content">
 
-            {!! Form::open(['route' => 'suplidor.store', 'class' => 'form-horizontal push-10-t push-10','method' => 'POST']) !!}
+            {!! Form::open(['route' => ['suplidor.update', $suplidor->id], 'class' => 'form-horizontal push-10-t push-10','method' => 'PUT']) !!}
             <div class="row">
                 <div class="col-sm-7">
                     <div class="form-group">
@@ -29,7 +29,7 @@
                         </div>
                         <div class="col-xs-6">
                             {!! Form::label('ciudad', 'Ciudad') !!}
-                            {!! Form::text('ciudad', $suplidor->ciudad, ['class' => 'form-control input-lg', 'id' => 'ciudad', 'placeholder' => 'Ciudad o Provincia']) !!}
+                            {!! Form::select('ciudad', $ciudades, $suplidor->ciudad, ['class' => 'form-control input-lg', 'id' => 'ciudad']) !!}
                         </div>
                     </div>
                 </div>
@@ -70,16 +70,7 @@
                             {!! Form::text('instagram', $suplidor->instagram, ['class' => 'form-control input-lg', 'id' => 'web', 'placeholder' => '@']) !!}
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="col-xs-6">
-                            {!! Form::label('capacidad', 'Capacidad en personas de atención') !!}
-                            {!! Form::number('capacidad', $suplidor->capacidad, ['class' => 'form-control input-lg', 'id' => 'web', 'placeholder' => '0']) !!}
-                        </div>
-                        <div class="col-xs-6">
-                            {!! Form::label('tipo', 'Tipo de servicios') !!}
-                            {!! Form::text('tipo', $suplidor->tipo, ['class' => 'form-control input-lg', 'id' => 'web', 'placeholder' => '']) !!}
-                        </div>
-                    </div>
+
                 </div>
                 <div class="col-sm-5">
                     <div class="form-group">
@@ -99,7 +90,7 @@
                         <div class="col-xs-6">
                             {!! Form::label('foto', 'Foto') !!}
                             <br>
-                            <img src="/assets/img/avatars/{{$suplidor->foto}}" alt="">
+                            <img src="/images/avatar/{{$suplidor->foto}}" alt="" height="150">
                         </div>
                     </div>
                 </div>

@@ -37,4 +37,5 @@ class CategoriaController extends Controller
         Flash::success('Se ha agregado la nueva categoria '. $cat->nombre);
         return redirect()->route('categoria.index');
     }
+
 }

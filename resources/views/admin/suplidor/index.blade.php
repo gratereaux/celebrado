@@ -23,7 +23,7 @@
                 <th class="text-center">ID</th>
                 <th>Nombre</th>
                 <th class="hidden-xs">Email</th>
-                <th class="hidden-xs" style="width: 15%;">Categoría</th>
+                <th class="hidden-xs" style="width: 15%;">Ciudad</th>
                 <th class="text-center" style="width: 10%;">Acciones</th>
             </tr>
             </thead>
@@ -33,15 +33,7 @@
                 <td class="text-center"><a href="{{route('suplidor.show', $suplidor->id)}}">{{$suplidor->id}}</a></td>
                 <td class="font-w600"><a href="{{route('suplidor.show', $suplidor->id)}}">{{$suplidor->nombre}}</a></td>
                 <td class="hidden-xs">{{$suplidor->correo}}</td>
-                <td class="hidden-xs">
-                    @foreach($suplidor->categoriasporsuplidor as $cats)
-                        @foreach ($categorias as $key => $value)
-                            @if($key == $cats->id_categoria)
-                                <span class="label label-info">{{ $value }}</span>
-                            @endif
-                        @endforeach
-                    @endforeach
-                </td>
+                <td class="hidden-xs">{{$ciudades[$suplidor->ciudad]}}</td>
                 <td class="text-center">
                     <div class="btn-group">
                        {!! Form::open(['method' => 'GET','class' => 'btn btn-xs' , 'route' => ['suplidor.edit', $suplidor->id]]) !!}

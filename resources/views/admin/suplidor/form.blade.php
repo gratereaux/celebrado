@@ -9,7 +9,7 @@
 <div class="block block-bordered">
     <div class="block-content">
 
-        {!! Form::open(['route' => 'suplidor.store', 'class' => 'form-horizontal push-10-t push-10','method' => 'POST', 'file' => 'true']) !!}
+        {!! Form::open(['route' => 'suplidor.store', 'class' => 'form-horizontal push-10-t push-10','method' => 'POST', 'files' => 'true']) !!}
             {{ csrf_field() }}
             <div class="row">
                 <div class="col-sm-7">
@@ -30,7 +30,8 @@
                         </div>
                         <div class="col-xs-6">
                             {!! Form::label('ciudad', 'Ciudad') !!}
-                            {!! Form::text('ciudad', null, ['class' => 'form-control input-lg', 'id' => 'ciudad', 'placeholder' => 'Ciudad o Provincia']) !!}
+                            {!! Form::select('ciudad', $ciudades, null, ['class' => 'form-control input-lg', 'id' => 'ciudad']) !!}
+
                         </div>
                     </div>
                 </div>
@@ -71,16 +72,6 @@
                             {!! Form::text('instagram', null, ['class' => 'form-control input-lg', 'id' => 'web', 'placeholder' => '@']) !!}
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="col-xs-6">
-                            {!! Form::label('capacidad', 'Capacidad en personas de atención') !!}
-                            {!! Form::number('capacidad', null, ['class' => 'form-control input-lg', 'id' => 'web', 'placeholder' => '0']) !!}
-                        </div>
-                        <div class="col-xs-6">
-                            {!! Form::label('tipo', 'Tipo de servicios') !!}
-                            {!! Form::text('tipo', null, ['class' => 'form-control input-lg', 'id' => 'web', 'placeholder' => '']) !!}
-                        </div>
-                    </div>
                 </div>
                 <div class="col-sm-5">
                     <div class="form-group">
@@ -97,10 +88,20 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        {!! Form::label('foto', 'Foto') !!}
-                        {!! Form::file('foto', null, ['class' => 'form-control input-lg']) !!}
+                        {!! Form::label('foto', 'Foto / Logo Suplidor') !!}
+                        {!! Form::file('foto', ['class' => 'form-control input-lg']) !!}
                     </div>
                 </div>
+                <div class="form-group">
+                        <div class="col-xs-6">
+                            {!! Form::label('tipo', 'Tipo') !!}
+                            {!! Form::text('tipo', null, ['class' => 'form-control input-lg', 'id' => 'tipo', 'placeholder' => 'Tipo de servicio']) !!}
+                        </div>
+                         <div class="col-xs-6">
+                            {!! Form::label('capacidad', 'Capacidad de servicio') !!}
+                            {!! Form::text('capacidad', null, ['class' => 'form-control input-lg', 'id' => 'capacidad', 'placeholder' => 'Capacidad de servicio']) !!}
+                        </div>
+                    </div>
             </div>
 
             <div class="form-group">

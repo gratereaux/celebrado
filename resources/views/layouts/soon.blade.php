@@ -55,7 +55,7 @@
 <section id="left-side">
 
     <!-- Your logo -->
-    <img src="/soon/img/logo.png" alt="" class="brand-logo" />
+    <img src="/soon/img/logo.png" alt="Celebra.do Organiza tus fiestas" class="brand-logo" />
 
     <div class="content">
 

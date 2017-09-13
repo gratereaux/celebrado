@@ -21,6 +21,7 @@
                 <th class="text-center">ID</th>
                 <th>Nombre</th>
                 <th class="hidden-xs">Email</th>
+                <th class="hidden-xs">Tipo</th>
                 <th class="text-center" style="width: 10%;">Acciones</th>
             </tr>
             </thead>
@@ -30,6 +31,15 @@
                     <td class="text-center"><a href="{{route('usuario.show', $usuario->id)}}">{{$usuario->id}}</a></td>
                     <td class="font-w600"><a href="{{route('usuario.show', $usuario->id)}}">{{$usuario->name}}</a></td>
                     <td class="hidden-xs">{{$usuario->email}}</td>
+                    <td class="hidden-xs">
+                        @if($usuario->type === 'admin')
+                            <span class="label label-danger">{{$usuario->type}}</span>
+                        @elseif($usuario->type === 'suplidor')
+                            <span class="label label-info">{{$usuario->type}}</span>
+                        @else
+                            <span class="label label-success">{{$usuario->type}}</span>
+                        @endif
+                    </td>
                     <td class="text-center">
                         <div class="btn-group">
                             {!! Form::open(['method' => 'GET','class' => 'btn btn-xs' , 'route' => ['usuario.edit', $usuario->id]]) !!}

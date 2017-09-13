@@ -49,6 +49,7 @@
 
     <link rel="stylesheet" href="/assets/js/plugins/simplemde/simplemde.min.css">
 
+
     <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
     <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
     <!-- END Stylesheets -->
@@ -486,7 +487,7 @@
                             <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-bubbles"></i><span class="sidebar-mini-hide">Blog</span></a>
                             <ul>
                                 <li>
-                                    <a href="#">Dummy</a>
+                                    <a href="{{ route('blog.index') }}">Blog Post</a>
                                 </li>
                             </ul>
                         </li>

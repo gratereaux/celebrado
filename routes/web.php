@@ -26,9 +26,14 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 
+//Blog
+Route::get('/blog', 'BlogController@index');
+Route::get('blog/{slug}', 'BlogController@show');
 
-Route::get('/admin', 'AdminController@index');
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
+
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'isAdmin']], function(){
+    Route::get('/', 'AdminController@index');
 
     Route::resource('suplidor', 'SuplidorController');
     Route::resource('usuario', 'UserController');
@@ -37,5 +42,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     Route::post('categoria', 'CategoriaController@store')->name('categoria.store');
     Route::delete('categoria/{id}', 'CategoriaController@remove')->name('categoria.destroy');
 
-});
 
+    Route::resource('servicio', 'ServicioController');
+    Route::get('servicio/add/{suplidor_id}', 'ServicioController@add')->name('servicio.add');
+
+
+    Route::resource('blog', 'BlogAdminController');
+
+
+
+});

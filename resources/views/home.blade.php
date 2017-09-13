@@ -8,13 +8,15 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    Hola {{ Auth::user()->name }}, en que te puedo ayudar hoy?!
                 </div>
             </div>
 
+            @if(Auth::user()->type == 'admin' && Auth::user()->name == 'Jose Gratereaux' )
             <passport-clients></passport-clients>
             <passport-authorized-clients></passport-authorized-clients>
             <passport-personal-access-tokens></passport-personal-access-tokens>
+            @endif
         </div>
     </div>
 </div>
