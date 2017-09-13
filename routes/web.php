@@ -11,9 +11,10 @@
 |
 */
 
+
 Route::get('/', function () {
     //temporal
-    return view('soon.regist');
+    return view('soon.index');
 });
 
 Route::get('/pre-register', function(){ return view('soon.regist'); })->name('preregister.index');
